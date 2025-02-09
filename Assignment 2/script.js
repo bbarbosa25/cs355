@@ -11,10 +11,10 @@ function toggleDarkMode() {
     }
 }
 
-
+// Event listener for dark mode toggle
 toggleBtn.addEventListener("click", toggleDarkMode);
 
-// Load dark mode setting from localStorage
+// Load dark mode setting from LocalStorage
 window.onload = function() {
     if (localStorage.getItem("darkMode") === "true") {
         document.documentElement.setAttribute("theme", "dark");

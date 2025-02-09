@@ -1,7 +1,7 @@
-/* LIGHT MODE (DEFAULT) */
+/* === LIGHT MODE === */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #D1E8FF;
+    background: #FFFFFF;
     color: #1E1E2F;
     margin: 0;
     padding: 0;
@@ -13,11 +13,11 @@ body {
 header {
     padding: 20px;
     font-size: 1.2em;
-    background: #e9f5f8;
+    background: #F5F7FA;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* FORM CONTAINER (LIGHT MODE) */
+/* === FORM CONTAINER (LIGHT MODE) === */
 .glass-container {
     background: #F5F5F5;
     padding: 30px;
@@ -27,7 +27,7 @@ header {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* FORM ELEMENTS (LIGHT MODE) */
+/* === FORM ELEMENTS (LIGHT MODE) === */
 .form-container input, 
 .form-container textarea {
     width: 100%;
@@ -51,7 +51,7 @@ input:focus, textarea:focus {
     background: #F0F0FF;
 }
 
-/* BUTTON STYLES */
+/* === BUTTON STYLES === */
 .btn-group {
     display: flex;
     justify-content: space-between;
@@ -79,7 +79,7 @@ input:focus, textarea:focus {
     opacity: 0.8;
 }
 
-/* DARK MODE TOGGLE BUTTON */
+/* === DARK MODE TOGGLE BUTTON === */
 .dark-mode-toggle {
     position: fixed;
     bottom: 20px;
@@ -96,7 +96,7 @@ input:focus, textarea:focus {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* DARK MODE */
+/* === DARK MODE === */
 [theme="dark"] {
     background: #000000;
     color: #FFFFFF;
@@ -108,13 +108,13 @@ input:focus, textarea:focus {
     box-shadow: none;
 }
 
-/* DARK MODE: CONTAINER FULLY BLACK */
+/* === DARK MODE: CONTAINER FULLY BLACK === */
 [theme="dark"] .glass-container {
     background: #111;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* DARK MODE: INPUT FIELDS DARK */
+/* === DARK MODE: INPUT FIELDS DARK === */
 [theme="dark"] input, 
 [theme="dark"] textarea {
     background: #222;
@@ -128,7 +128,7 @@ input:focus, textarea:focus {
     background: #333;
 }
 
-/* DARK MODE: BUTTON COLORS UPDATED */
+/* === DARK MODE: BUTTON COLORS === */
 [theme="dark"] .primary-btn {
     background: #00A8FF;
     color: black;
@@ -140,13 +140,4 @@ input:focus, textarea:focus {
 
 [theme="dark"] .dark-mode-toggle {
     background: rgba(255, 255, 255, 0.2);
-}
-[theme="dark"] h2 {
-    color: #D1E8FF; 
-}
-[theme="dark"] label {
-    color: #D1E8FF;
-}
-[theme="dark"] #result-container {
-    color: #00A8FF; 
 }

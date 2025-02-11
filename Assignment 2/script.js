@@ -1,22 +1,24 @@
-const toggleBtn = document.querySelector("#toggle");
+const $ = document.querySelector.bind(document);
 
-// Function to toggle dark mode
-function toggleDarkMode() {
-    if (document.documentElement.hasAttribute("theme")) {
-        document.documentElement.removeAttribute("theme");
-        localStorage.setItem("darkMode", "false");
+const toggleBtn = $('#toggle'); 
+
+toggleBtn.addEventListener('click', e => {
+    if (toggleBtn.innerText === 'DARK') {
+        document.documentElement.setAttribute('theme', 'dark');
+        toggleBtn.innerText = 'LIGHT';
+        localStorage.setItem('darkMode', 'true');
     } else {
-        document.documentElement.setAttribute("theme", "dark");
-        localStorage.setItem("darkMode", "true");
+        document.documentElement.removeAttribute('theme');
+        toggleBtn.innerText = 'DARK';
+        localStorage.setItem('darkMode', 'false'); 
     }
-}
+});
 
-// Event listener for dark mode toggle
-toggleBtn.addEventListener("click", toggleDarkMode);
-
-// Load dark mode setting from LocalStorage
-window.onload = function() {
-    if (localStorage.getItem("darkMode") === "true") {
-        document.documentElement.setAttribute("theme", "dark");
+window.onload = function () {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.documentElement.setAttribute('theme', 'dark');
+        toggleBtn.innerText = 'LIGHT';
+    } else {
+        toggleBtn.innerText = 'DARK';
     }
 };

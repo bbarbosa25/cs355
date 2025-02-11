@@ -10,30 +10,17 @@
 
     <header>
         <h1>Submission Received</h1>
-        <p>Here are the details you provided:</p>
     </header>
 
-    <main class="glass-container">
-        <section class="form-data">
-            <h2>Your Information</h2>
-            <div id="result-container" class="grid-container"></div>
-        </section>
+    <main>
+        <h2>Your Information Has Been Submitted</h2>
+        <div id="result-container"></div>
     </main>
 
-    <button id="toggle" class="dark-mode-toggle">🌙</button>
+    <button id="toggle">DARK</button>
 
     <script src="script.js"></script>
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const resultContainer = document.getElementById("result-container");
-
-        params.forEach((value, key) => {
-            const row = document.createElement("div");
-            row.classList.add("data-row");
-            row.innerHTML = `<span class="key">${key}:</span> <span class="value">${value}</span>`;
-            resultContainer.appendChild(row);
-        });
-    </script>
 
 </body>
 </html>
+

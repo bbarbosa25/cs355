@@ -1,143 +1,54 @@
 /* === LIGHT MODE === */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     background: #FFFFFF;
-    color: #1E1E2F;
-    margin: 0;
-    padding: 0;
+    color: #00A8FF;
     text-align: center;
-    transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Header */
 header {
     padding: 20px;
-    font-size: 1.2em;
-    background: #F5F7FA;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* === FORM CONTAINER (LIGHT MODE) === */
-.glass-container {
     background: #F5F5F5;
-    padding: 30px;
-    width: 50%;
-    margin: 30px auto;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* === FORM ELEMENTS (LIGHT MODE) === */
-.form-container input, 
-.form-container textarea {
+/* Form and Display Container */
+main {
+    padding: 20px;
+}
+
+input, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin: 10px 0;
-    border-radius: 8px;
     border: 1px solid #CCC;
-    background: #FFFFFF;
-    color: #1E1E2F;
-    font-size: 1em;
-    outline: none;
-    transition: 0.3s ease-in-out;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #666;
-}
-
-input:focus, textarea:focus {
-    border: 2px solid #0077FF;
-    background: #F0F0FF;
-}
-
-/* === BUTTON STYLES === */
-.btn-group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
+button {
+    padding: 10px;
+    margin-top: 10px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.primary-btn {
-    background: #0077FF;
-    color: white;
-}
-
-.primary-btn:hover {
-    background: #005FD1;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-/* === DARK MODE TOGGLE BUTTON === */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.dark-mode-toggle:hover {
-    background: rgba(0, 0, 0, 0.8);
 }
 
 /* === DARK MODE === */
 [theme="dark"] {
-    background: #000000;
-    color: #FFFFFF;
+    background: #000;
+    color: #FFF;
 }
 
 [theme="dark"] header {
-    background: #111;
-    color: #D1E8FF;
-    box-shadow: none;
+    background: #222;
 }
 
-/* === DARK MODE: CONTAINER FULLY BLACK === */
-[theme="dark"] .glass-container {
-    background: #111;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
-}
-
-/* === DARK MODE: INPUT FIELDS DARK === */
 [theme="dark"] input, 
 [theme="dark"] textarea {
-    background: #222;
-    color: #D1E8FF;
-    border: 1px solid #444;
-}
-
-[theme="dark"] input:focus, 
-[theme="dark"] textarea:focus {
-    border: 2px solid #00A8FF;
     background: #333;
+    color: #FFF;
+    border: 1px solid #555;
 }
 
-/* === DARK MODE: BUTTON COLORS === */
-[theme="dark"] .primary-btn {
+[theme="dark"] button {
     background: #00A8FF;
     color: black;
-}
-
-[theme="dark"] .primary-btn:hover {
-    background: #0077CC;
-}
-
-[theme="dark"] .dark-mode-toggle {
-    background: rgba(255, 255, 255, 0.2);
 }

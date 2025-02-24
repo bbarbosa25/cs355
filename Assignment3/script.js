@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function loadDogPic(breed) {
         console.log(`Fetching image for ${breed}...`); 
         try {
-            let response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
+            let response = await fetch(`https://dog.ceo/api/breed//images/random`);
             let data = await response.json();
 
             if (data.status === "success") {

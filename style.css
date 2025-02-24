@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+    background: #0077FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #005FD1;
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+#errorMessage {
+    color: red;
+    font-weight: bold;
+}

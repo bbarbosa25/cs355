@@ -4,67 +4,59 @@ document.addEventListener("DOMContentLoaded", async () => {
     const searchBtn = document.getElementById("searchBtn");
     const dogImage = document.getElementById("dogImage");
     const errorMessage = document.getElementById("errorMessage");
+    const refreshBtn = document.getElementById("refreshBtn"); // New refresh button
 
     let breeds = [];
-    let interval;
 
-    console.log("Fetching breed list...");
-
-    // Fetch breeds from local Express API
     try {
-        let res = await fetch("/breeds");
+        const res = await fetch("/breeds");
         breeds = await res.json();
-        console.log("Breeds loaded:", breeds);
 
-        // Populate <datalist> for autocomplete
         breeds.forEach(breed => {
             const option = document.createElement("option");
             option.value = breed;
             breedList.appendChild(option);
         });
     } catch (error) {
-        console.log("Error loading breeds:", error);
+        console.error("Failed to load breed list:", error);
     }
 
-    // Fetch and display a random dog image from Dog CEO API directly
     async function fetchDogImage(breed) {
-        console.log(`Fetching image for ${breed}...`);
         try {
-            let res = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
-            let data = await res.json();
+            const res = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
+            const data = await res.json();
 
             if (data.status === "success") {
                 dogImage.src = data.message;
                 dogImage.style.display = "block";
                 errorMessage.innerText = "";
-                console.log("Image loaded successfully");
             } else {
-                showError();
+                errorMessage.innerText = "No image found for this breed.";
+                dogImage.style.display = "none";
             }
         } catch (error) {
-            console.log("Error fetching image:", error);
-            showError();
+            errorMessage.innerText = "Error fetching image. Try again.";
+            dogImage.style.display = "none";
         }
     }
 
-    // Show error message if breed is not found
-    function showError() {
-        errorMessage.innerText = "No such breed found!";
-        dogImage.style.display = "none";
-        clearInterval(interval);
-    }
-
-    // Handle search button click
     searchBtn.addEventListener("click", () => {
         const breed = breedInput.value.toLowerCase().trim();
-
+        
         if (!breeds.includes(breed)) {
-            showError();
+            errorMessage.innerText = "Breed not found.";
+            dogImage.style.display = "none";
             return;
         }
 
         fetchDogImage(breed);
-        clearInterval(interval);
-        interval = setInterval(() => fetchDogImage(breed), 5000);
+    });
+
+    refreshBtn.addEventListener("click", () => {
+        const breed = breedInput.value.toLowerCase().trim();
+        if (breed && breeds.includes(breed)) {
+            fetchDogImage(breed);
+        }
     });
 });
+

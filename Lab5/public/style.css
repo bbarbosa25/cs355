@@ -1,0 +1,46 @@
+body {
+    background-color: #345;
+    color: #ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+
+div {
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    background-color: #456;
+    color: #ccc;
+    border-radius: 5px;
+    width: 100%;
+    border: solid 1px gray;
+}
+
+button:hover, button:active {
+    background-color: #567;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: monospace;
+    font-size: 16pt;
+    width: 100%;
+    height: 3em;
+}
+
+#results {
+    white-space: pre;
+    background: #222;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ddd;
+}

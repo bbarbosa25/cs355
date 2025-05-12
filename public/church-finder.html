@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Church - Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Church Finder Feature -->
+  <div id="church-finder-page">
+    <h1>Looking for a church?</h1>
+    <p>We've got you covered. Our Church Finder helps you discover places of worship near you — whether you're new in town, traveling, or just exploring.</p>
+    <p>Here’s what you can do:</p>
+    <ul>
+      <li>See which churches are nearby (even the small ones you might miss!)</li>
+      <li>Check service times and directions without having to dig</li>
+      <li>Join live streams or catch up on past sermons</li>
+      <li>Browse reviews and get a feel for each church’s vibe</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — Powered by prayer, code, and community 🙌</p>
+  </footer>
+
+  <script>
+    function logout() {
+      // nuke the session and send 'em back to login
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

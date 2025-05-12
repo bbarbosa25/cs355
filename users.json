@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Brendan Barbosa",
+    "email": "brendan.barbosa2002@gmail.com",
+    "username": "bbarbosa",
+    "password": "$2b$10$q7.ZtQtb6YPxY6C/qAj/bOcZ6eehwg45dYd8yVWSZtUq6eiLfII42"
+  },
+  {
+    "name": "Nicole Santos",
+    "email": "nsantos0410@gmail.com",
+    "username": "nsantos",
+    "password": "$2b$10$izb9ZjiiWbsQuDAlbwHf8e8/uhiIOIF2/.2m/zw6.FoYlIHqsZdBa"
+  },
+  {
+    "name": "Candida Barbosa",
+    "email": "cbarbosa@gmail.com",
+    "username": "candidabarbosa",
+    "password": "$2b$10$GOAJso2cJ0jX24OCiZgi3.reUpBRia6ZkyXWmvrdbYGLAqGiWvlhC"
+  },
+  {
+    "name": "Jorge Barbosa",
+    "email": "jbarbosa@gmail.com",
+    "username": "jbarbosa",
+    "password": "$2b$10$iiRysXYr/wIJpa1fET50Ve03VwQxSEkqtNVFV14b0nyStWizSbL2."
+  }
+]

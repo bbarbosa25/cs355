@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Christian Faith Apps - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button onclick="logout()" class="logout-button">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Form -->
+  <section id="contact" class="auth-page">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <p id="formError" style="color: red; display: none;">All fields are required.</p>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Christian Faith Apps. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const errorMessage = document.getElementById('formError');
+
+      if (!name || !email || !message) {
+        errorMessage.style.display = 'block';
+      } else {
+        errorMessage.style.display = 'none';
+        alert('Thank you for contacting us!');
+      }
+    });
+  </script>
+</body>
+</html>
+

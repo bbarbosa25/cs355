@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Faith-Inspired Goods | Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Merchandise Content -->
+  <div id="merchandise-page" class="auth-page">
+    <h1>Faith You Can Wear (and Share)</h1>
+    <p>Whether you’re shopping for yourself or looking for a meaningful gift, we’ve got hand-picked items that let your faith shine — on your sleeve, around your wrist, or in your everyday routines.</p>
+
+    <ul>
+      <li>✝️ Soft, stylish Christian tees and hoodies for all seasons</li>
+      <li>💎 Jewelry and accessories that keep Scripture close</li>
+      <li>📖 Beautifully designed Bibles, devotionals, and journals</li>
+      <li>🎁 Thoughtful gift sets for birthdays, baptisms, or just because</li>
+    </ul>
+
+    <p>We believe what you wear — and give — can be a testimony. Thanks for supporting faith-forward living!</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — blessed to serve, happy to ship 📦</p>
+  </footer>
+
+  <script>
+    function logout() {
+      // Clear session and head back to login
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

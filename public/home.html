@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome | Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Photo Gallery Background -->
+  <section id="hero">
+    <div class="photo-gallery">
+      <div class="gallery-item"><img src="photo1.jpg" alt="Worship and fellowship"></div>
+      <div class="gallery-item"><img src="photo2.jpg" alt="Bible study group"></div>
+      <div class="gallery-item"><img src="photo3.jpg" alt="Serving the community"></div>
+      <div class="gallery-item"><img src="photo4.jpg" alt="Christian events"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>One Step Closer to Christ — Every Day</h1>
+      <p>Our tools are here to help you grow your faith, stay inspired, and connect with others walking the same path.</p>
+      <button class="cta-btn" onclick="location.href='features.html'">Explore the Apps</button>
+    </div>
+  </section>
+
+  <!-- Why People Use Our Apps -->
+  <section id="why-choose">
+    <div class="container">
+      <h2>Why People Love These Apps</h2>
+      <div class="features">
+
+        <div class="feature-card" id="bible-study-card">
+          <h3>Real Bible Engagement</h3>
+          <p>No fluff. Just solid reading plans, verse highlights, and group discussions that keep you rooted in Scripture.</p>
+        </div>
+
+        <div class="feature-card" id="prayer-support-card">
+          <h3>Prayer That Keeps You Connected</h3>
+          <p>Track requests, set quiet-time alerts, and never forget to pray for a friend again.</p>
+        </div>
+
+        <div class="feature-card" id="mission-trips-card">
+          <h3>Easy Mission Trip Planning</h3>
+          <p>Keep your heart focused while we help you handle the logistics — from itineraries to team chats.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — built by people who love Jesus, code, and coffee ☕✝️</p>
+  </footer>
+
+  <script>
+    function logout() {
+      // Logging out the user session
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

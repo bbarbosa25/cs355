@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Site Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <div id="about-content">
+    <h1>Who We Are</h1>
+    <p>We're just a small team of folks who love Jesus and build stuff. Our aim is to make apps that help people in their daily walk with God — from reading the Bible to staying on track with prayer or planning church events.</p>
+    <p>Started in a garage (like all great tech stories!), we've grown into a community of believers who love merging faith with function. We're not perfect, but we try our best to point people to Christ through tech.</p>
+  </div>
+
+  <!-- Site Footer -->
+  <footer>
+    <small>© 2025 Christian Faith Apps. Built with ❤️ and faith.</small>
+  </footer>
+
+  <script>
+    function logout() {
+      // just clears user session stuff
+      localStorage.clear();
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+Christian Faith Apps - Full Stack Web App
+This project is a faith-based web application that allows users to register, log in, create blog posts, and manage content in a clean and user-friendly interface.
+
+File Structure
+
+project-root/
+├── public/
+│   ├── index.html          # Homepage
+│   ├── register.html       # User signup
+│   ├── login.html          # User login
+│   ├── blog.html           # Blog page with post creation/edit/delete
+│   ├── profile.html        # User profile (optional)
+│   ├── script.js           # Frontend logic (form handling, blog functions)
+│   ├── style.css           # UI styling 
+│   ├── users.json          # Stores registered user info
+│   ├── posts.json          # Stores blog posts
+├── server.js               # Express backend API
+Server Code (server.js)
+Purpose: Serves static files, handles registration, login, blog post creation, editing, and deletion.
+
+Key Endpoints
+Endpoint	Method	Description
+/	GET	Redirects to register.html
+/users/register	POST	Registers a user with hashed password
+/users/auth	POST	Authenticates login credentials
+/posts	GET	Returns all blog posts
+/posts	POST	Adds a new blog post
+/posts/:id	PUT	Edits a post by ID (only by creator)
+/posts/:id	DELETE	Deletes a post by ID (only by creator)
+
+Data Format
+users.json
+json
+
+[
+  {
+    "name": "John",
+    "email": "john@example.com",
+    "username": "john123",
+    "password": "$2b$10$...",
+    "imagePath": ""
+  }
+]
+posts.json
+json
+
+[
+  {
+    "id": 1715459120000,
+    "title": "God is Good",
+    "content": "Sharing my testimony...",
+    "authorUsername": "john123"
+  }
+]
+Frontend (public/)
+login.html & register.html
+Forms collect email, username, and password
+
+Sends POST requests to /users/auth or /users/register
+
+On success, saves userUsername to localStorage for session use
+
+blog.html
+Fetches and displays all posts
+
+Allows editing/deleting only by the logged-in author
+
+Posts are submitted via JSON to /posts
+
+script.js
+Handles:
+
+Form validation
+
+Blog post actions (create/edit/delete)
+
+Smooth scrolling
+
+Logout
+
+localStorage session control
+
+Security Notes
+Passwords are hashed using bcrypt
+
+No actual database; this is a JSON-file-based demo
+
+Only authors can edit/delete their own posts
+

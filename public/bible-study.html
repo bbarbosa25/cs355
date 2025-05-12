@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bible Study - Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Bible Study Info -->
+  <div id="bible-study-page">
+    <h1>Bible Study Tools</h1>
+    <p>If you're like us, you want to dig deeper into Scripture — but life gets busy. We built this tool to help keep you on track.</p>
+    <p>Whether you're flying solo or part of a study group, here’s what you can do:</p>
+    <ul>
+      <li>Create or join a Bible study group with friends</li>
+      <li>Highlight verses and jot down thoughts</li>
+      <li>Stay on top of your reading goals (no guilt-tripping!)</li>
+      <li>Get daily verses and gentle nudges to stay in the Word</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — built with prayer, bugs, and a lot of coffee ☕</p>
+  </footer>
+
+  <script>
+    function logout() {
+      // clear saved stuff & redirect
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

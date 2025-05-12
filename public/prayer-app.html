@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prayer App | Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Prayer App Overview -->
+  <section id="prayer-app" class="auth-page">
+    <h1>Your Prayer Life, Just a Tap Away</h1>
+    <p>Life gets busy, but your time with God matters. Our Prayer App helps you stay rooted in prayer, stay connected with others, and remember the things on your heart.</p>
+
+    <ul>
+      <li>⏰ Gentle reminders to take a prayer break</li>
+      <li>📬 Share prayer requests with friends and family</li>
+      <li>📈 See how your prayers and faith journey grow over time</li>
+      <li>🫶 Join groups to pray together, even from miles apart</li>
+    </ul>
+
+    <p>Whether you're whispering a quick prayer during lunch or leading an intercessory team, this tool was built to walk with you.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — praying with you every step of the way 🙏</p>
+  </footer>
+
+  <script>
+    function logout() {
+      // logout and head back to login
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

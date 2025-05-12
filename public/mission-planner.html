@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mission Trip Planner | Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="logout-button" onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mission Trip Planner Content -->
+  <section id="mission-planner" class="auth-page">
+    <h1>Plan with Purpose</h1>
+    <p>Heading out on a mission trip? Let’s make the prep smoother. This app is your go-to tool for pulling everything together—whether you’re leading a team or just joining in.</p>
+
+    <ul>
+      <li>✅ Set and track your trip goals (spiritual & logistical)</li>
+      <li>🚌 Plan transport and places to stay—without the chaos</li>
+      <li>🤝 Keep everyone on the same page and stay connected</li>
+      <li>📈 Watch your mission progress unfold</li>
+    </ul>
+
+    <p>Because when you're doing the Lord's work, the last thing you need is spreadsheet stress. We've got you.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — Go, make disciples 🌍✝️</p>
+  </footer>
+
+  <script>
+    function logout() {
+      // wipe session and redirect
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

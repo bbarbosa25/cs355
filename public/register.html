@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Christian Faith Apps</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Clearing any previous login state when opening the register page
+    localStorage.clear();
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Registration Form -->
+  <section class="auth-page">
+    <h1>Join the Christian Faith Apps Community</h1>
+    <p>You're just a few steps away from access to all our faith-building tools.</p>
+
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Your Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="text" id="username" placeholder="Choose a Username" required>
+      <input type="password" id="password" placeholder="Create a Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already a member? <a href="login.html">Log in here</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Christian Faith Apps — Walking in faith, together 🤝</p>
+  </footer>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (!name || !email || !username || !password) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      try {
+        const res = await fetch("/users/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, username, password })
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          localStorage.setItem("userUsername", username);
+          alert("Welcome! You're all set.");
+          window.location.href = "blog.html";
+        } else {
+          alert(data.error || "Oops! Something went wrong.");
+        }
+
+      } catch (err) {
+        console.error("Registration error:", err);
+        alert("Could not register at the moment. Please try again later.");
+      }
+    });
+  </script>
+
+</body>
+</html>
